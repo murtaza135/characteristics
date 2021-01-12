@@ -1,0 +1,372 @@
+// Flex
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-grow {
+    & > * {
+        flex-grow: 1;
+    }
+}
+
+.flex-fill {
+    width: 100%;
+
+    & > * {
+        width: 100%;
+        flex-grow: 1;
+    }
+}
+
+
+// Grid
+.grid {
+    display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    justify-content: center;
+}
+
+.grid-center-v {
+
+}
+
+
+// Containers
+.top {
+    position: relative;
+}
+
+.container {
+    max-width: $website-width;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+
+// Cards
+.card-1 {
+    padding: 1.5rem 1rem;
+    background: $light-color;
+    color: set-text-color($light-color);
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.card-2 {
+    padding: 1.5rem 1rem;
+    background: $light-color;
+    color: set-text-color($light-color);
+    border: 1px solid #aaaaaa;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+
+// Lines
+.line-1 {
+    height: 2px;
+    width: 7rem;
+    background: $primary-color;
+    display: block;
+    margin: 0.75rem auto 1rem;
+}
+
+.line-2 {
+    height: 2px;
+    width: 8rem;
+    background: $primary-color;
+    display: block;
+    margin: 0.2rem 0 1rem;
+}
+
+.v-line {
+    width: 2px;
+    height: 2rem;
+    background: $medium-color;
+    display: block;
+    margin: 0 auto;
+}
+
+
+// Text
+.title-1 {
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.title-2 {
+    font-size: 2rem;
+    display: block;
+    text-align: left;
+    font-weight: 100;
+}
+
+.title-3 {
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    font-weight: 100;
+}
+
+.title-s {
+    font-size: 1.7rem;
+    display: block;
+    text-align: left;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+}
+
+.text {
+    &-primary {
+        color: $primary-color;
+    }
+
+    &-secondary {
+        color: $secondary-color;
+    }
+
+    &-dark {
+        color: $dark-color;
+    }
+
+    &-medium {
+        color: $medium-color;
+    }
+
+    &-light {
+        color: $light-color;
+    }
+
+    &-danger {
+        color: $danger-color;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+// Backgrounds
+.bg {
+    &-primary {
+        background: $primary-color;
+        color: set-text-color($primary-color);
+    }
+
+    &-secondary {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+
+    &-dark {
+        background: $dark-color;
+        color: set-text-color($dark-color);
+    }
+
+    &-medium {
+        background: $medium-color;
+        color: set-text-color($medium-color);
+    }
+
+    &-light {
+        background: $light-color;
+        color: set-text-color($light-color);
+    }
+}
+
+
+// Buttons
+%btn-shared {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    transition: all 0.4s;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn {
+    @extend %btn-shared;
+
+    &-primary {
+        @extend %btn-shared;
+        background: $primary-color;
+        color: set-text-color($primary-color);
+    }
+
+    &-secondary {
+        @extend %btn-shared;
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+
+    &-dark {
+        @extend %btn-shared;
+        background: $dark-color;
+        color: set-text-color($dark-color);
+    }
+
+    &-medium {
+        @extend %btn-shared;
+        background: $medium-color;
+        color: set-text-color($medium-color);
+    }
+
+    &-light {
+        @extend %btn-shared;
+        background: $light-color;
+        color: set-text-color($light-color);
+    }
+}
+
+.btn-s {
+    padding: 0.5rem 1rem;
+}
+
+.btn-l {
+    padding: 1.5rem 3.2rem;
+}
+
+.btn-xs {
+    padding: 0.5rem 0rem;
+}
+
+// *[class^="btn-"]:hover {
+//     opacity: 75%;
+// }
+
+
+// Progress Bars
+.progress {
+    overflow: hidden;
+    height: 20px;
+    background: $medium-color;
+    border-radius: 5px;
+    margin-bottom: 0.8rem;
+
+    div {
+        height: 100%;
+        background: $primary-color;
+        color: #ffffff;
+        text-align: center;
+    }
+}
+
+
+// Padding
+.p-1 { padding: 0.25rem; }
+.p-2 { padding: 0.5rem; }
+.p-3 { padding: 1rem; }
+.p-4 { padding: 1.5rem; }
+.p-5 { padding: 2rem; }
+.p-6 { padding: 3rem; }
+
+.px-1 { padding: 0 0.25rem }
+.px-2 { padding: 0 0.5rem }
+.px-3 { padding: 0 1rem; }
+.px-4 { padding: 0 1.5rem; }
+.px-5 { padding: 0 2rem; }
+.px-6 { padding: 0 3rem; }
+
+.py-1 { padding: 0.25rem 0 }
+.py-2 { padding: 0.5rem 0 }
+.py-3 { padding: 1rem 0; }
+.py-4 { padding: 1.5rem 0; }
+.py-5 { padding: 2rem 0; }
+.py-6 { padding: 3rem 0; }
+
+.pt-1 { padding: 0.25rem 0 0 0; }
+.pt-2 { padding: 0.5rem 0 0 0; }
+.pt-3 { padding: 1rem 0 0 0; }
+.pt-4 { padding: 1.5rem 0 0 0; }
+.pt-5 { padding: 2rem 0 0 0; }
+.pt-6 { padding: 3rem 0 0 0; }
+.pt-7 { padding: 4rem 0 0 0; }
+
+.pb-1 { padding: 0 0 0.25rem 0; }
+.pb-2 { padding: 0 0 0.5rem 0; }
+.pb-3 { padding: 0 0 1rem 0; }
+.pb-4 { padding: 0 0 1.5rem 0; }
+.pb-5 { padding: 0 0 2rem 0; }
+.pb-6 { padding: 0 0 3rem 0; }
+
+.pl-1 { padding: 0 0 0 0.25rem; }
+.pl-2 { padding: 0 0 0 0.5rem; }
+.pl-3 { padding: 0 0 0 1rem; }
+.pl-4 { padding: 0 0 0 1.5rem; }
+.pl-5 { padding: 0 0 0 2rem; }
+.pl-6 { padding: 0 0 0 3rem; }
+
+.pr-1 { padding: 0 0.25rem 0 0; }
+.pr-2 { padding: 0 0.5rem 0 0; }
+.pr-3 { padding: 0 1rem 0 0; }
+.pr-4 { padding: 0 1.5rem 0 0; }
+.pr-5 { padding: 0 2rem 0 0; }
+.pr-6 { padding: 0 3rem 0 0; }
+
+
+// Margin
+.m-1 { margin: 0.25rem; }
+.m-2 { margin: 0.5rem; }
+.m-3 { margin: 1rem; }
+.m-4 { margin: 1.5rem; }
+.m-5 { margin: 2rem; }
+.m-6 { margin: 3rem; }
+
+.mx-1 { margin: 0 0.25rem }
+.mx-2 { margin: 0 0.5rem }
+.mx-3 { margin: 0 1rem; }
+.mx-4 { margin: 0 1.5rem; }
+.mx-5 { margin: 0 2rem; }
+.mx-6 { margin: 0 3rem; }
+
+.my-1 { margin: 0.25rem 0 }
+.my-2 { margin: 0.5rem 0 }
+.my-3 { margin: 1rem 0; }
+.my-4 { margin: 1.5rem 0; }
+.my-5 { margin: 2rem 0; }
+.my-6 { margin: 3rem 0; }
+
+.mt-1 { margin: 0.25rem 0 0 0; }
+.mt-2 { margin: 0.5rem 0 0 0; }
+.mt-3 { margin: 1rem 0 0 0; }
+.mt-4 { margin: 1.5rem 0 0 0; }
+.mt-5 { margin: 2rem 0 0 0; }
+.mt-6 { margin: 3rem 0 0 0; }
+
+.mb-1 { margin: 0 0 0.25rem 0; }
+.mb-2 { margin: 0 0 0.5rem 0; }
+.mb-3 { margin: 0 0 1rem 0; }
+.mb-4 { margin: 0 0 1.5rem 0; }
+.mb-5 { margin: 0 0 2rem 0; }
+.mb-6 { margin: 0 0 3rem 0; }
+.mb-7 { margin: 0 0 4rem 0; }
+
+.ml-1 { margin: 0 0 0 0.25rem; }
+.ml-2 { margin: 0 0 0 0.5rem; }
+.ml-3 { margin: 0 0 0 1rem; }
+.ml-4 { margin: 0 0 0 1.5rem; }
+.ml-5 { margin: 0 0 0 2rem; }
+.ml-6 { margin: 0 0 0 3rem; }
+
+.mr-1 { margin: 0 0.25rem 0 0; }
+.mr-2 { margin: 0 0.5rem 0 0; }
+.mr-3 { margin: 0 1rem 0 0; }
+.mr-4 { margin: 0 1.5rem 0 0; }
+.mr-5 { margin: 0 2rem 0 0; }
+.mr-6 { margin: 0 3rem 0 0; }

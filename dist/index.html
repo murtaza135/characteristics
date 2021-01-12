@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Characteristics</title>
+</head>
+<body>
+    <header class="top">
+        <div class="container">
+            <div class="main-card card-2 mt-6">
+                <div class="alert-container"></div>
+
+                <div class="title-area mb-4">
+                    <h1 class="title-1">Characteristics</h1>
+                    <div class="line-1"></div>
+                    <p class="subtitle text-center">Let's see what you're like!</p>
+                </div>
+
+                <form class="attributes-form grid">
+                    <input type="text" name="firstname" id="firstname" placeholder="First Name">
+                    <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+                    <input type="number" name="age" id="age" placeholder="Age">
+                    
+                    <div class="flex">
+                        <div class="height-container">
+                            <input type="number" name="height" id="height" placeholder="Height">
+                        </div>
+                        <div class="btn-group">
+                            <button class="btn btn-dark active">cm</button>
+                            <button class="btn btn-dark">ft</button>
+                        </div>
+                    </div>
+
+                    <div id="gender" class="radio">
+                        <label class="radio-title">What is your gender?</label>
+
+                        <div class="radio-group grid">
+                            <div class="radio-control">
+                                <input type="radio" id="male" name="gender" value="male" checked>
+                                <label for="male">Male</label>
+                            </div>
+    
+                            <div class="radio-control">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="is-married" class="radio">
+                        <label class="radio-title">Are you married?</label>
+
+                        <div class="radio-group grid">
+                            <div class="radio-control">
+                                <input type="radio" id="yes-married" name="is-married" value="yes" checked>
+                                <label for="yes-married">Yes</label>
+                            </div>
+    
+                            <div class="radio-control">
+                                <input type="radio" id="no-married" name="is-married" value="no">
+                                <label for="no-married">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="additional-info-radio" class="radio mb-6"></div>
+
+                    <input type="button" value="Submit" id="submit" class="btn-primary">
+                </form>
+
+                <!-- Loader -->
+                <!-- <div id="loading">
+                    <img src="./img/loading.gif" alt="loading...">
+                </div> -->
+
+                <div class="results-container pt-7">
+                    <h2 class="title-s text-center">Results</h2>
+
+                    <div class="results">
+                        <!-- <h4>Beauty: </h4>
+                        <div class="progress">
+                            <div style="width: 100%"></div>
+                        </div>
+    
+                        <h4>Intelligence and Wisdom: </h4>
+                        <div class="progress">
+                            <div style="width: 80%"></div>
+                        </div>
+    
+                        <h4>Drive and Passion: </h4>
+                        <div class="progress">
+                            <div style="width: 70%"></div>
+                        </div>
+    
+                        <h4>Good Character: </h4>
+                        <div class="progress">
+                            <div style="width: 100%"></div>
+                        </div>
+    
+                        <h4>Chance of Success: </h4>
+                        <div class="progress">
+                            <div style="width: 80%"></div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="js/app.bundle.js"></script>
+</body>
+</html>
