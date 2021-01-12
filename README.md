@@ -1,1 +1,1 @@
-# characteristics 
+# Characteristics
