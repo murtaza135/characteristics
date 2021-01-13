@@ -732,11 +732,11 @@ img {
 
 .main-card .attributes-form.grid #height-container input[name="height"] {
   display: inline;
-  margin-right: 0.5rem;
 }
 
-.main-card .attributes-form.grid #height-container input[name="height"]:last-of-type {
-  margin-right: 0;
+.main-card .attributes-form.grid #height-container input[name="height"]:first-of-type {
+  margin-left: 1rem;
+  margin-right: 0.5rem;
 }
 
 .main-card .attributes-form.grid .btn-group {

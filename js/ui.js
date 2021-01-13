@@ -1,5 +1,5 @@
 import Utilities from "./utilities"
-import { Alert, AdditionalInfoRadio } from "./components"
+import { Alert, AdditionalInfoRadio, HeightInput } from "./components"
 
 class UI {
     constructor() {
@@ -53,6 +53,32 @@ class UI {
         const additionalInfoRadio = new AdditionalInfoRadio(gender);
         this.additionalInfoContainerUI.innerHTML = "";
         this.additionalInfoContainerUI.appendChild(additionalInfoRadio);
+    }
+
+    showHeightInputBasedUponMeasurementType(measurementType) {
+        const heightInput = new HeightInput(measurementType);
+        this.heightContainerUI.innerHTML = "";
+
+        for (const index in heightInput) {
+            this.heightContainerUI.appendChild(heightInput[index]);
+        }
+    }
+
+    changeHeightBtnColors(measurementType) {
+        if (measurementType === "cm") {
+            if (this.btnFtUI.classList.contains("active")) {
+                this.btnFtUI.classList.remove("active");
+            }
+
+            this.btnCmUI.classList.add("active");
+        }
+        else {
+            if (this.btnCmUI.classList.contains("active")) {
+                this.btnCmUI.classList.remove("active");
+            }
+
+            this.btnFtUI.classList.add("active");
+        }
     }
 }
 

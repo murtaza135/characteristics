@@ -59,6 +59,31 @@ export function AdditionalInfoRadio(gender) {
     return div;
 }
 
-export function heightInput(measurementType) {
-    
+export function HeightInput(measurementType) {
+    if (measurementType === "cm") {
+        const input = document.createElement("input");
+        input.setAttribute("type", "number");
+        input.setAttribute("name", "height");
+        input.setAttribute("id", "cm");
+        input.setAttribute("placeholder", "Height (cm)");
+        return { input };
+    }
+    else {
+        const inputFt = document.createElement("input");
+        inputFt.setAttribute("type", "number");
+        inputFt.setAttribute("name", "height");
+        inputFt.setAttribute("id", "ft");
+        inputFt.setAttribute("placeholder", "ft");
+
+        const inputIn = document.createElement("input");
+        inputIn.setAttribute("type", "number");
+        inputIn.setAttribute("name", "height");
+        inputIn.setAttribute("id", "in");
+        inputIn.setAttribute("placeholder", "in");
+
+        return {
+            inputFt,
+            inputIn
+        };
+    }
 }
