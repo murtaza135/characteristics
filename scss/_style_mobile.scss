@@ -1,0 +1,95 @@
+@media(max-width: 700px) {
+    .container {
+        padding: 0;
+    }
+
+    .main-card {
+        margin: 5px 5px;
+        width: auto;
+        padding: 1rem 1rem 1.25rem;
+    }
+}
+
+@media(max-width: 450px) {
+    .container {
+        padding: 0;
+    }
+
+    .main-card {
+        margin: 5px 5px;
+        width: auto;
+        padding: 1rem 1rem 1.25rem;
+
+        .attributes-form.grid {
+            margin: 0 0.75rem;
+
+            grid-template-areas:
+                "firstname"
+                "lastname"
+                "age"
+                "height-container"
+                "gender-container"
+                "is-married-container"
+                "additional-info-container"
+                "submit"
+            ;
+
+            .height-container.flex {
+                #height.flex {
+                    input[name="height"] {
+                        &:first-of-type {
+                            margin-left: 0;
+                            margin-right: 0.5rem;
+                        }
+                    }
+                }
+            }
+
+            .radio {
+                .radio-group.grid {
+                    grid-template-columns: repeat(2, 1fr);
+                    margin-left: 1.75rem;
+                }
+            }
+
+            #additional-info-container {
+                margin-bottom: 0.5rem;
+            }
+
+            #submit {
+                width: 100%;
+                justify-self: center;
+                font-size: 1.25rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    #results-container {
+        h2 {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+@media(max-width: 350px) {
+    .main-card {
+        .main-title {
+            .title-1 {
+                font-size: 1.75rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+        }
+
+        .attributes-form.grid {
+            .radio {
+                .radio-group.grid {
+                    margin-left: 1.25rem;
+                }
+            }
+        }
+    }
+}
