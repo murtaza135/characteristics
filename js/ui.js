@@ -1,29 +1,39 @@
 import Utilities from "./utilities"
 import { Alert, AdditionalInfoRadio, HeightInput } from "./components"
 
+
 class UI {
     constructor() {
-        this.currentGenderValue;
+        // UI State
+        this.currentGenderValue = null;
 
-        this.firstNameUI = document.querySelector("#firstname");
-        this.lastNameUI = document.querySelector("#lastname");
-        this.ageUI = document.querySelector("#age");
+        // Main Containers
+        this.alertContainerUI = document.querySelector(".alert-container");
         this.heightContainerUI = document.querySelector(".height-container");
-        this.heightUI = document.querySelector("#height");
-        this.genderContainer = document.querySelector("#gender-container");
+        this.genderContainerUI = document.querySelector("#gender-container");
         this.additionalInfoContainerUI = document.querySelector("#additional-info-container");
         this.loaderUI = document.querySelector("#loader");
         this.resultsContainerUI = document.querySelector("#results-container");
+        
+        // Child Containers
+        this.heightUI = document.querySelector("#height");
         this.resultsUI = document.querySelector("#results");
         
-        this.btnCmUI = document.querySelector("#btn-cm");
-        this.btnFtUI = document.querySelector("#btn-ft");
-        this.btnSubmit = document.querySelector("#submit");
-
+        // Inputs
+        this.firstNameUI = document.querySelector("#firstname");
+        this.lastNameUI = document.querySelector("#lastname");
+        this.ageUI = document.querySelector("#age");
+        
+        // Checked Radio Buttons
         this.genderRadioUI = () => document.querySelectorAll("input[name=gender]:checked")[0];
         this.isMarriedRadioUI = () => document.querySelectorAll("input[name=is-married]:checked")[0];
         this.hasBeardRadioUI = () => document.querySelectorAll("input[name=has-beard]:checked")[0];
         this.hasLongHairRadioUI = () => document.querySelectorAll("input[name=has-long-hair]:checked")[0];
+        
+        // Buttons
+        this.btnCmUI = document.querySelector("#btn-cm");
+        this.btnFtUI = document.querySelector("#btn-ft");
+        this.btnSubmit = document.querySelector("#submit");
     }
 
 
@@ -31,23 +41,23 @@ class UI {
         return this.currentGenderValue;
     }
 
-    getGenderRadioValue() {
+    getGenderValueFromDom() {
         this.currentGenderValue = this.genderRadioUI().value
         return this.currentGenderValue;
     }
 
-    getAllDetails() {
-        return {
-            firstname: this.firstNameUI.value,
-            lastname: this.lastNameUI.value,
-            age: parseInt(this.ageUI.value),
-            // height: parseInt(this.heightUI.value),
-            gender: this.genderRadioUI().value,
-            isMarried: this.isMarriedRadioUI().value,
-            hasBeard: this.hasBeardRadioUI().value,
-            hasLongHair: this.hasLongHairRadioUI().value
-        };
-    }
+    // getAllDetails() {
+    //     return {
+    //         firstname: this.firstNameUI.value,
+    //         lastname: this.lastNameUI.value,
+    //         age: parseInt(this.ageUI.value),
+    //         // height: parseInt(this.heightUI.value),
+    //         gender: this.genderRadioUI().value,
+    //         isMarried: this.isMarriedRadioUI().value,
+    //         hasBeard: this.hasBeardRadioUI().value,
+    //         hasLongHair: this.hasLongHairRadioUI().value
+    //     };
+    // }
 
     showAdditionalInfoBasedUponGender(gender) {
         const additionalInfoRadio = new AdditionalInfoRadio(gender);
@@ -81,5 +91,6 @@ class UI {
         }
     }
 }
+
 
 export const ui = new UI();

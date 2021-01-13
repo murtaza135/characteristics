@@ -17,6 +17,7 @@ export function Alert(message, classNames, hasCloseBtn = true) {
     return alert;
 }
 
+
 export function AdditionalInfoRadio(gender) {
     const div = document.createElement("div");
     div.className = "radio";
@@ -58,6 +59,7 @@ export function AdditionalInfoRadio(gender) {
 
     return div;
 }
+
 
 export function HeightInput(measurementType) {
     if (measurementType === "cm") {
