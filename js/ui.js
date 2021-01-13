@@ -6,6 +6,7 @@ class UI {
     constructor() {
         // UI State
         this.currentGenderValue = null;
+        this.currentHeightMeasurementType = null;
 
         // Main Containers
         this.alertContainerUI = document.querySelector(".alert-container");
@@ -46,23 +47,41 @@ class UI {
         return this.currentGenderValue;
     }
 
-    // getAllDetails() {
-    //     return {
-    //         firstname: this.firstNameUI.value,
-    //         lastname: this.lastNameUI.value,
-    //         age: parseInt(this.ageUI.value),
-    //         // height: parseInt(this.heightUI.value),
-    //         gender: this.genderRadioUI().value,
-    //         isMarried: this.isMarriedRadioUI().value,
-    //         hasBeard: this.hasBeardRadioUI().value,
-    //         hasLongHair: this.hasLongHairRadioUI().value
-    //     };
-    // }
+    getAllFormDetails() {
+        const heightChildren = this.heightUI.children;
+        const measurementType = heightChildren.length === 1 ? "cm" : "ft";
+        const cm = heightChildren.length === 1 ? heightChildren.item(0).value : null;
+        const ft = heightChildren.length === 2 ? heightChildren.item(0).value : null;
+        const inches = heightChildren.length === 2 ? heightChildren.item(1).value : null;
+
+        const hasBeard = this.hasBeardRadioUI() ? this.hasBeardRadioUI().value : null;
+        const hasLongHair = this.hasLongHairRadioUI() ? this.hasLongHairRadioUI().value : null;
+
+        return {
+            firstname: this.firstNameUI.value,
+            lastname: this.lastNameUI.value,
+            age: this.ageUI.value,
+            measurementType: measurementType,
+            cm: cm,
+            ft: ft,
+            in: inches,
+            gender: this.genderRadioUI().value,
+            isMarried: this.isMarriedRadioUI().value,
+            hasBeard: hasBeard,
+            hasLongHair: hasLongHair
+        };
+    }
 
     showAdditionalInfoBasedUponGender(gender) {
         const additionalInfoRadio = new AdditionalInfoRadio(gender);
         this.additionalInfoContainerUI.innerHTML = "";
         this.additionalInfoContainerUI.appendChild(additionalInfoRadio);
+    }
+
+    changeHeightInputState(measurementType) {
+        this.currentHeightMeasurementType = measurementType;
+        this.showHeightInputBasedUponMeasurementType(measurementType);
+        this.changeHeightBtnColors(measurementType);
     }
 
     showHeightInputBasedUponMeasurementType(measurementType) {
@@ -96,6 +115,14 @@ class UI {
         this.resultsUI.innerHTML = "";
         this.resultsUI.appendChild(characteristicProgressBars);
         this.resultsContainerUI.style.display = "block";
+    }
+
+    showLoader() {
+        this.loaderUI.style.display = "block";
+    }
+
+    hideLoader() {
+        this.loaderUI.style.display = "none";
     }
 }
 

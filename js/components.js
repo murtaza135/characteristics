@@ -28,12 +28,12 @@ export function AdditionalInfoRadio(gender) {
 
             <div class="radio-group grid">
                 <div class="radio-control">
-                    <input type="radio" id="yes-beard" name="has-beard" value="yes" checked>
+                    <input type="radio" id="yes-beard" name="has-beard" value="true" checked>
                     <label for="yes-beard">Yes</label>
                 </div>
 
                 <div class="radio-control">
-                    <input type="radio" id="no-beard" name="has-beard" value="no">
+                    <input type="radio" id="no-beard" name="has-beard" value="false">
                     <label for="no-beard">No</label>
                 </div>
             </div>
@@ -45,12 +45,12 @@ export function AdditionalInfoRadio(gender) {
 
             <div class="radio-group grid">
                 <div class="radio-control">
-                    <input type="radio" id="yes-long-hair" name="has-long-hair" value="yes" checked>
+                    <input type="radio" id="yes-long-hair" name="has-long-hair" value="true" checked>
                     <label for="yes-long-hair">Yes</label>
                 </div>
 
                 <div class="radio-control">
-                    <input type="radio" id="no-long-hair" name="has-long-hair" value="no">
+                    <input type="radio" id="no-long-hair" name="has-long-hair" value="false">
                     <label for="no-long-hair">No</label>
                 </div>
             </div>
