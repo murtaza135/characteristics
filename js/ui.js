@@ -78,7 +78,7 @@ class UI {
         this.additionalInfoContainerUI.appendChild(additionalInfoRadio);
     }
 
-    changeHeightInputState(measurementType) {
+    changeHeightInput(measurementType) {
         this.currentHeightMeasurementType = measurementType;
         this.showHeightInputBasedUponMeasurementType(measurementType);
         this.changeHeightBtnColors(measurementType);

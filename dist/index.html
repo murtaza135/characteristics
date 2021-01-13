@@ -23,11 +23,8 @@
                     <input type="number" name="age" id="age" placeholder="Age" min="0">
                     
                     <div class="height-container flex">
-                        <div id="height" class="flex">
-                            <!-- <input type="number" name="height" id="cm" placeholder="Height (cm)"> -->
-                            <!-- <input type="number" name="height" id="ft" placeholder="ft">
-                            <input type="number" name="height" id="in" placeholder="in"> -->
-                        </div>
+                        <div id="height" class="flex"></div>
+                        
                         <div class="btn-group">
                             <button id="btn-cm" class="height-btn btn-medium active" data-measurement-type="cm">cm</button>
                             <button id="btn-ft" class="height-btn btn-medium" data-measurement-type="ft">ft</button>
@@ -66,23 +63,7 @@
                         </div>
                     </div>
 
-                    <div id="additional-info-container" class="mb-3">
-                        <!-- <div class="radio">
-                            <label class="radio-title">Do you have a beard?</label>
-    
-                            <div class="radio-group grid">
-                                <div class="radio-control">
-                                    <input type="radio" id="yes-beard" name="has-beard" value="true" checked>
-                                    <label for="yes-beard">Yes</label>
-                                </div>
-    
-                                <div class="radio-control">
-                                    <input type="radio" id="no-beard" name="has-beard" value="false">
-                                    <label for="no-beard">No</label>
-                                </div>
-                            </div>
-                        </div> -->
-                    </div>
+                    <div id="additional-info-container" class="mb-3"></div>
 
                     <input type="button" value="Submit" id="submit" class="btn-primary">
                 </form>
@@ -96,36 +77,10 @@
                 </div>
 
 
-                <div id="results-container" class="pt-7">
+                <div id="results-container" class="pt-5">
                     <h2 class="title-s text-center">Results</h2>
 
-                    <div id="results">
-                        <!-- <h4>Physical Attractiveness: </h4>
-                        <div class="progress">
-                            <div style="width: 50%"><span class="text">50%</span></div>
-                            
-                        </div>
-    
-                        <h4>Intelligence and Wisdom: </h4>
-                        <div class="progress">
-                            <div style="width: 80%"><span class="text">80%</span></div>
-                        </div>
-    
-                        <h4>Drive and Passion: </h4>
-                        <div class="progress">
-                            <div style="width: 70%"><span class="text">70%</span></div>
-                        </div>
-    
-                        <h4>Good Character: </h4>
-                        <div class="progress">
-                            <div style="width: 100%"><span class="text">100%</span></div>
-                        </div>
-    
-                        <h4>Chance of Success: </h4>
-                        <div class="progress">
-                            <div style="width: 80%"><span class="text">80%</span></div>
-                        </div> -->
-                    </div>
+                    <div id="results"></div>
                 </div>
             </div>
         </div>
