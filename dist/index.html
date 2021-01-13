@@ -24,12 +24,14 @@
                     <input type="number" name="age" id="age" placeholder="Age">
                     
                     <div class="flex">
-                        <div class="height-container">
-                            <input type="number" name="height" id="height" placeholder="Height">
+                        <div id="height-container" class="flex">
+                            <!-- <input type="number" name="height" id="cm" placeholder="Height"> -->
+                            <input type="number" name="height" id="ft" placeholder="ft">
+                            <input type="number" name="height" id="in" placeholder="in">
                         </div>
                         <div class="btn-group">
-                            <button class="btn btn-dark active">cm</button>
-                            <button class="btn btn-dark">ft</button>
+                            <button id="btn-cm" class="height-btn btn-dark active">cm</button>
+                            <button id="btn-ft" class="height-btn btn-dark">ft</button>
                         </div>
                     </div>
 
@@ -65,20 +67,35 @@
                         </div>
                     </div>
 
-                    <div id="additional-info-radio" class="radio mb-6"></div>
+                    <div id="additional-info-container" class="mb-6">
+                        <!-- <div class="radio">
+                            <label class="radio-title">Do you have a beard?</label>
+    
+                            <div class="radio-group grid">
+                                <div class="radio-control">
+                                    <input type="radio" id="yes-beard" name="has-beard" value="yes" checked>
+                                    <label for="yes-beard">Yes</label>
+                                </div>
+    
+                                <div class="radio-control">
+                                    <input type="radio" id="no-beard" name="has-beard" value="no">
+                                    <label for="no-beard">No</label>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
 
                     <input type="button" value="Submit" id="submit" class="btn-primary">
                 </form>
 
-                <!-- Loader -->
-                <!-- <div id="loading">
+                <div id="loader">
                     <img src="./img/loading.gif" alt="loading...">
-                </div> -->
+                </div>
 
-                <div class="results-container pt-7">
+                <div id="results-container" class="pt-7">
                     <h2 class="title-s text-center">Results</h2>
 
-                    <div class="results">
+                    <div id="results">
                         <!-- <h4>Beauty: </h4>
                         <div class="progress">
                             <div style="width: 100%"></div>

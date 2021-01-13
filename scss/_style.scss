@@ -32,6 +32,7 @@ img {
 .main-card {
     width: 60%;
     margin: 4rem auto;
+    padding: 1.5rem 1rem 2rem;
 
     .attributes-form.grid {
         justify-content:stretch;
@@ -43,7 +44,7 @@ img {
             "age height"
             "gender gender"
             "is-married is-married"
-            "additional-info-radio additional-info-radio"
+            "additional-info-container additional-info-container"
             "submit submit"
         ;
 
@@ -53,7 +54,7 @@ img {
         #height {grid-area: height;}
         #gender {grid-area: gender;}
         #is-married {grid-area: is-married;}
-        #additional-info-radio {grid-area: additional-info-radio;}
+        #additional-info-container {grid-area: additional-info-container;}
         #submit {grid-area: submit;}
 
         input[type="text"], input[type="number"] {
@@ -67,11 +68,24 @@ img {
             margin-bottom: 0.5rem;
         }
 
+        #height-container {
+            justify-content: space-evenly;
+            
+            input[name="height"] {
+                display: inline;
+                margin-right: 0.5rem;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+
         .btn-group {
             margin-left: 1rem;
             display: flex;
 
-            .btn {
+            .height-btn {
                 margin: 0;
                 padding: 0.25rem 0.5rem;
                 min-width: 35px;
@@ -124,4 +138,9 @@ img {
             font-weight: 600;
         }
     }
+}
+
+
+#loader, #results-container {
+    display: none;
 }

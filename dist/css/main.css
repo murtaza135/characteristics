@@ -674,12 +674,13 @@ img {
 .main-card {
   width: 60%;
   margin: 4rem auto;
+  padding: 1.5rem 1rem 2rem;
 }
 
 .main-card .attributes-form.grid {
   justify-content: stretch;
   margin: 0 1.25rem;
-  grid-template-areas: "firstname firstname" "lastname lastname" "age height" "gender gender" "is-married is-married" "additional-info-radio additional-info-radio" "submit submit";
+  grid-template-areas: "firstname firstname" "lastname lastname" "age height" "gender gender" "is-married is-married" "additional-info-container additional-info-container" "submit submit";
 }
 
 .main-card .attributes-form.grid #firstname {
@@ -706,8 +707,8 @@ img {
   grid-area: is-married;
 }
 
-.main-card .attributes-form.grid #additional-info-radio {
-  grid-area: additional-info-radio;
+.main-card .attributes-form.grid #additional-info-container {
+  grid-area: additional-info-container;
 }
 
 .main-card .attributes-form.grid #submit {
@@ -725,12 +726,25 @@ img {
   margin-bottom: 0.5rem;
 }
 
+.main-card .attributes-form.grid #height-container {
+  justify-content: space-evenly;
+}
+
+.main-card .attributes-form.grid #height-container input[name="height"] {
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.main-card .attributes-form.grid #height-container input[name="height"]:last-of-type {
+  margin-right: 0;
+}
+
 .main-card .attributes-form.grid .btn-group {
   margin-left: 1rem;
   display: flex;
 }
 
-.main-card .attributes-form.grid .btn-group .btn {
+.main-card .attributes-form.grid .btn-group .height-btn {
   margin: 0;
   padding: 0.25rem 0.5rem;
   min-width: 35px;
@@ -738,20 +752,20 @@ img {
   outline: none !important;
 }
 
-.main-card .attributes-form.grid .btn-group .btn:first-child {
+.main-card .attributes-form.grid .btn-group .height-btn:first-child {
   border-radius: 5px 0 0 5px;
 }
 
-.main-card .attributes-form.grid .btn-group .btn:last-child {
+.main-card .attributes-form.grid .btn-group .height-btn:last-child {
   border-radius: 0 5px 5px 0;
 }
 
-.main-card .attributes-form.grid .btn-group .btn.active {
+.main-card .attributes-form.grid .btn-group .height-btn.active {
   background: #9757D2;
   color: #333333;
 }
 
-.main-card .attributes-form.grid .btn-group .btn:active {
+.main-card .attributes-form.grid .btn-group .height-btn:active {
   opacity: 70%;
 }
 
@@ -780,4 +794,8 @@ img {
   justify-self: center;
   font-size: 1.25rem;
   font-weight: 600;
+}
+
+#loader, #results-container {
+  display: none;
 }
