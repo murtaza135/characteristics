@@ -246,25 +246,8 @@
     padding: 0.5rem 0rem;
 }
 
-// *[class^="btn-"]:hover {
-//     opacity: 75%;
-// }
-
-
-// Progress Bars
-.progress {
-    overflow: hidden;
-    height: 20px;
-    background: $medium-color;
-    border-radius: 5px;
-    margin-bottom: 0.8rem;
-
-    div {
-        height: 100%;
-        background: $primary-color;
-        color: #ffffff;
-        text-align: center;
-    }
+.btn-hover-1:hover {
+    opacity: 75%;
 }
 
 

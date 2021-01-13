@@ -12,19 +12,21 @@
             <div class="main-card card-2 mt-6">
                 <div class="alert-container"></div>
 
-                <div class="title-area mb-4">
+
+                <div class="main-title mb-4">
                     <h1 class="title-1">Characteristics</h1>
                     <div class="line-1"></div>
                     <p class="subtitle text-center">Let's see what you're like!</p>
                 </div>
+
 
                 <form class="attributes-form grid">
                     <input type="text" name="firstname" id="firstname" placeholder="First Name">
                     <input type="text" name="lastname" id="lastname" placeholder="Last Name">
                     <input type="number" name="age" id="age" placeholder="Age">
                     
-                    <div class="flex">
-                        <div id="height-container" class="flex">
+                    <div class="height-container flex">
+                        <div id="height" class="flex">
                             <!-- <input type="number" name="height" id="cm" placeholder="Height (cm)"> -->
                             <!-- <input type="number" name="height" id="ft" placeholder="ft">
                             <input type="number" name="height" id="in" placeholder="in"> -->
@@ -35,7 +37,7 @@
                         </div>
                     </div>
 
-                    <div id="gender" class="radio">
+                    <div id="gender-container" class="radio">
                         <label class="radio-title">What is your gender?</label>
 
                         <div class="radio-group grid">
@@ -51,7 +53,7 @@
                         </div>
                     </div>
 
-                    <div id="is-married" class="radio">
+                    <div id="is-married-container" class="radio">
                         <label class="radio-title">Are you married?</label>
 
                         <div class="radio-group grid">
@@ -88,43 +90,47 @@
                     <input type="button" value="Submit" id="submit" class="btn-primary">
                 </form>
 
+
                 <div id="loader">
                     <img src="./img/loading.gif" alt="loading...">
                 </div>
+
 
                 <div id="results-container" class="pt-7">
                     <h2 class="title-s text-center">Results</h2>
 
                     <div id="results">
-                        <!-- <h4>Beauty: </h4>
+                        <!-- <h4>Attractiveness: </h4>
                         <div class="progress">
-                            <div style="width: 100%"></div>
+                            <div style="width: 50%"><span class="text">50%</span></div>
+                            
                         </div>
     
                         <h4>Intelligence and Wisdom: </h4>
                         <div class="progress">
-                            <div style="width: 80%"></div>
+                            <div style="width: 80%"><span class="text">80%</span></div>
                         </div>
     
                         <h4>Drive and Passion: </h4>
                         <div class="progress">
-                            <div style="width: 70%"></div>
+                            <div style="width: 70%"><span class="text">70%</span></div>
                         </div>
     
                         <h4>Good Character: </h4>
                         <div class="progress">
-                            <div style="width: 100%"></div>
+                            <div style="width: 100%"><span class="text">100%</span></div>
                         </div>
     
                         <h4>Chance of Success: </h4>
                         <div class="progress">
-                            <div style="width: 80%"></div>
+                            <div style="width: 80%"><span class="text">80%</span></div>
                         </div> -->
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
 
     <script src="js/app.bundle.js"></script>
 </body>

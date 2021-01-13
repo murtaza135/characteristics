@@ -33,7 +33,7 @@
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 700px;
   padding: 0 1.5rem;
   margin: auto;
   overflow: hidden;
@@ -211,19 +211,8 @@
   padding: 0.5rem 0rem;
 }
 
-.progress {
-  overflow: hidden;
-  height: 20px;
-  background: #777777;
-  border-radius: 5px;
-  margin-bottom: 0.8rem;
-}
-
-.progress div {
-  height: 100%;
-  background: #9757D2;
-  color: #ffffff;
-  text-align: center;
+.btn-hover-1:hover {
+  opacity: 75%;
 }
 
 .p-1 {
@@ -642,6 +631,37 @@
   color: #333333;
 }
 
+.progress {
+  position: relative;
+  overflow: hidden;
+  height: 35px;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+  background: #777777;
+  border: 2px solid #9757D2;
+  border-radius: 30px;
+}
+
+.progress div {
+  position: relative;
+  height: 100%;
+  background: #9757D2;
+  color: #ffffff;
+  text-align: center;
+}
+
+.progress .text {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  padding: 4px 0 0 1rem;
+  color: #ffffff;
+  background: transparent;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -667,12 +687,11 @@ ul {
 }
 
 img {
-  /* Stops image from extending beyond container */
   width: 100%;
 }
 
 .main-card {
-  width: 60%;
+  width: 100%;
   margin: 4rem auto;
   padding: 1.5rem 1rem 2rem;
 }
@@ -680,7 +699,7 @@ img {
 .main-card .attributes-form.grid {
   justify-content: stretch;
   margin: 0 1.25rem;
-  grid-template-areas: "firstname firstname" "lastname lastname" "age height" "gender gender" "is-married is-married" "additional-info-container additional-info-container" "submit submit";
+  grid-template-areas: "firstname firstname" "lastname lastname" "age height-container" "gender-container gender-container" "is-married-container is-married-container" "additional-info-container additional-info-container" "submit submit";
 }
 
 .main-card .attributes-form.grid #firstname {
@@ -695,16 +714,16 @@ img {
   grid-area: age;
 }
 
-.main-card .attributes-form.grid #height {
-  grid-area: height;
+.main-card .attributes-form.grid .height-container {
+  grid-area: height-container;
 }
 
-.main-card .attributes-form.grid #gender {
-  grid-area: gender;
+.main-card .attributes-form.grid #gender-container {
+  grid-area: gender-container;
 }
 
-.main-card .attributes-form.grid #is-married {
-  grid-area: is-married;
+.main-card .attributes-form.grid #is-married-container {
+  grid-area: is-married-container;
 }
 
 .main-card .attributes-form.grid #additional-info-container {
@@ -726,25 +745,25 @@ img {
   margin-bottom: 0.5rem;
 }
 
-.main-card .attributes-form.grid #height-container {
+.main-card .attributes-form.grid .height-container.flex #height.flex {
   justify-content: space-evenly;
 }
 
-.main-card .attributes-form.grid #height-container input[name="height"] {
+.main-card .attributes-form.grid .height-container.flex #height.flex input[name="height"] {
   display: inline;
 }
 
-.main-card .attributes-form.grid #height-container input[name="height"]:first-of-type {
+.main-card .attributes-form.grid .height-container.flex #height.flex input[name="height"]:first-of-type {
   margin-left: 1rem;
   margin-right: 0.5rem;
 }
 
-.main-card .attributes-form.grid .btn-group {
+.main-card .attributes-form.grid .height-container.flex .btn-group {
   margin-left: 1rem;
   display: flex;
 }
 
-.main-card .attributes-form.grid .btn-group .height-btn {
+.main-card .attributes-form.grid .height-container.flex .btn-group .height-btn {
   margin: 0;
   padding: 0.25rem 0.5rem;
   min-width: 35px;
@@ -752,20 +771,20 @@ img {
   outline: none !important;
 }
 
-.main-card .attributes-form.grid .btn-group .height-btn:first-child {
+.main-card .attributes-form.grid .height-container.flex .btn-group .height-btn:first-child {
   border-radius: 5px 0 0 5px;
 }
 
-.main-card .attributes-form.grid .btn-group .height-btn:last-child {
+.main-card .attributes-form.grid .height-container.flex .btn-group .height-btn:last-child {
   border-radius: 0 5px 5px 0;
 }
 
-.main-card .attributes-form.grid .btn-group .height-btn.active {
+.main-card .attributes-form.grid .height-container.flex .btn-group .height-btn.active {
   background: #9757D2;
   color: #333333;
 }
 
-.main-card .attributes-form.grid .btn-group .height-btn:active {
+.main-card .attributes-form.grid .height-container.flex .btn-group .height-btn:active {
   opacity: 70%;
 }
 
@@ -796,6 +815,23 @@ img {
   font-weight: 600;
 }
 
-#loader, #results-container {
+#loader {
   display: none;
+}
+
+#results-container {
+  display: none;
+}
+
+#results-container #results h4 {
+  margin-bottom: 3px;
+  margin-left: 5px;
+}
+
+#results-container #results .progress {
+  margin-bottom: 1.25rem;
+}
+
+#results-container #results .progress:last-child {
+  margin-bottom: 0.8rem;
 }

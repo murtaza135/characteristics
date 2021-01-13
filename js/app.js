@@ -7,10 +7,9 @@ ui.btnCmUI.addEventListener("click", (event) => loadHeightInput(event, "cm"));
 ui.btnFtUI.addEventListener("click", (event) => loadHeightInput(event, "ft"));
 
 
-function loadAdditionalInfo(event) {
+function loadAdditionalInfo() {
     const gender = ui.getGenderRadioValue();
     ui.showAdditionalInfoBasedUponGender(gender);
-    event.preventDefault();
 }
 
 function loadHeightInput(event, measurementType = "cm") {
@@ -19,13 +18,11 @@ function loadHeightInput(event, measurementType = "cm") {
     event.preventDefault();
 }
 
-function loadAdditionalInfoAfterClick(event) {
+function loadAdditionalInfoAfterClick() {
     const oldGender = ui.getCurrentGenderValue();
     const newGender = ui.getGenderRadioValue();
     
     if (oldGender !== newGender) {
         ui.showAdditionalInfoBasedUponGender(newGender);
     }
-
-    event.preventDefault();
 }

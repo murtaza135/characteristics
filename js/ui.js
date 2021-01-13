@@ -8,13 +8,13 @@ class UI {
         this.firstNameUI = document.querySelector("#firstname");
         this.lastNameUI = document.querySelector("#lastname");
         this.ageUI = document.querySelector("#age");
+        this.heightContainerUI = document.querySelector(".height-container");
         this.heightUI = document.querySelector("#height");
-        this.heightContainerUI = document.querySelector("#height-container");
+        this.genderContainer = document.querySelector("#gender-container");
         this.additionalInfoContainerUI = document.querySelector("#additional-info-container");
         this.loaderUI = document.querySelector("#loader");
         this.resultsContainerUI = document.querySelector("#results-container");
         this.resultsUI = document.querySelector("#results");
-        this.genderContainer = document.querySelector("#gender");
         
         this.btnCmUI = document.querySelector("#btn-cm");
         this.btnFtUI = document.querySelector("#btn-ft");
@@ -41,7 +41,7 @@ class UI {
             firstname: this.firstNameUI.value,
             lastname: this.lastNameUI.value,
             age: parseInt(this.ageUI.value),
-            height: parseInt(this.heightUI.value),
+            // height: parseInt(this.heightUI.value),
             gender: this.genderRadioUI().value,
             isMarried: this.isMarriedRadioUI().value,
             hasBeard: this.hasBeardRadioUI().value,
@@ -57,10 +57,10 @@ class UI {
 
     showHeightInputBasedUponMeasurementType(measurementType) {
         const heightInput = new HeightInput(measurementType);
-        this.heightContainerUI.innerHTML = "";
+        this.heightUI.innerHTML = "";
 
         for (const index in heightInput) {
-            this.heightContainerUI.appendChild(heightInput[index]);
+            this.heightUI.appendChild(heightInput[index]);
         }
     }
 
