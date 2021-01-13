@@ -18,6 +18,28 @@ class Utilities {
             }, deleteTime)
         }
     }
+
+    static scrollToNode(node) {
+        const y = node.getBoundingClientRect().top + window.scrollY;
+        window.scroll({
+            top: y,
+            behavior: 'smooth'
+        });
+    }
+
+    static scrollToBottom() {
+        window.scroll({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    }
+
+    static scrollToTop() {
+        window.scroll({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
 }
 
 

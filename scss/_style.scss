@@ -151,8 +151,12 @@ img {
 
 #loader {
     display: none;
-    // height: 100px;
-    // width: 100px;
+    justify-content: center;
+
+    img {
+        height: 200px;
+        width: 200px;
+    }
 }
 
 

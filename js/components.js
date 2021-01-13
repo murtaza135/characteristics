@@ -68,6 +68,7 @@ export function HeightInput(measurementType) {
         input.setAttribute("name", "height");
         input.setAttribute("id", "cm");
         input.setAttribute("placeholder", "Height (cm)");
+        input.setAttribute("min", "100");
         return { input };
     }
     else {
@@ -76,12 +77,14 @@ export function HeightInput(measurementType) {
         inputFt.setAttribute("name", "height");
         inputFt.setAttribute("id", "ft");
         inputFt.setAttribute("placeholder", "ft");
+        inputFt.setAttribute("min", "1");
 
         const inputIn = document.createElement("input");
         inputIn.setAttribute("type", "number");
         inputIn.setAttribute("name", "height");
         inputIn.setAttribute("id", "in");
         inputIn.setAttribute("placeholder", "in");
+        inputIn.setAttribute("min", "0");
 
         return {
             inputFt,

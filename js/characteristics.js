@@ -23,18 +23,18 @@ export class Characteristics {
         }
 
         // Age
-        if (isNaN(this.age)) {
+        if (isNaN(this.age) || this.age <= 0) {
             return false;
         }
 
         // Height
         if (this.measurementType === "cm") {
-            if (isNaN(this.cm)) {
+            if (isNaN(this.cm) || this.cm <= 0) {
                 return false;
             }
         }
         else if (this.measurementType === "ft") {
-            if (isNaN(this.ft) || isNaN(this.in)) {
+            if (isNaN(this.ft) || this.ft <= 0 || isNaN(this.in) || this.in <= 0) {
                 return false;
             }
         }

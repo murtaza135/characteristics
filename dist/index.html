@@ -10,9 +10,6 @@
     <header class="top">
         <div class="container">
             <div class="main-card card-2 mt-6">
-                <div class="alert-container"></div>
-
-
                 <div class="main-title mb-4">
                     <h1 class="title-1">Characteristics</h1>
                     <div class="line-1"></div>
@@ -23,7 +20,7 @@
                 <form class="attributes-form grid">
                     <input type="text" name="firstname" id="firstname" placeholder="First Name">
                     <input type="text" name="lastname" id="lastname" placeholder="Last Name">
-                    <input type="number" name="age" id="age" placeholder="Age">
+                    <input type="number" name="age" id="age" placeholder="Age" min="0">
                     
                     <div class="height-container flex">
                         <div id="height" class="flex">
@@ -91,7 +88,10 @@
                 </form>
 
 
-                <div id="loader">
+                <div class="alert-container mt-5"></div>
+
+
+                <div id="loader" class="flex m-3">
                     <img src="./img/loading.gif" alt="loading...">
                 </div>
 

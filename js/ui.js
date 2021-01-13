@@ -117,12 +117,35 @@ class UI {
         this.resultsContainerUI.style.display = "block";
     }
 
+    removeCharacteristicProgressBars() {
+        this.resultsUI.innerHTML = "";
+        this.resultsContainerUI.style.display = "none";
+    }
+
     showLoader() {
         this.loaderUI.style.display = "block";
     }
 
     hideLoader() {
         this.loaderUI.style.display = "none";
+    }
+
+    showAlert(message, classNames) {
+        this.clearAlert();
+
+        classNames = "alert" + " " + classNames;
+        const alert = new Alert(message, classNames, false);
+        this.alertContainerUI.appendChild(alert)
+
+        setTimeout(() => Utilities.fadeOutAndRemove(alert), 2500);
+    }
+
+    clearAlert() {
+        const currentAlert = document.querySelector(".alert");
+
+        if (currentAlert) {
+            currentAlert.remove();
+        }
     }
 }
 

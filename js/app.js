@@ -1,5 +1,6 @@
 import { ui } from "./ui";
-import { Characteristics } from "./characteristics"
+import { Characteristics } from "./characteristics";
+import Utilities from "./utilities";
 
 
 // Event Listeners
@@ -26,13 +27,24 @@ function loadHeightInput(event, measurementType = "cm") {
 }
 
 function startLoaderForCharacteristics() {
+    ui.removeCharacteristicProgressBars();
     ui.showLoader();
-    setTimeout(loadCharacteristicProgressBars, 1500);
+    Utilities.scrollToBottom();
+    setTimeout(loadCharacteristicProgressBars, 2000);
 }
 
 function loadCharacteristicProgressBars() {
     const formDetails = ui.getAllFormDetails();
     const characteristics = new Characteristics(formDetails);
 
-    ui.showCharacteristicProgressBars(characteristics.calculateCharacteristics());
+    if (characteristics.areAttributesValid()) {
+        const calculatedCharacteristics = characteristics.calculateCharacteristics();
+        ui.showCharacteristicProgressBars(calculatedCharacteristics);
+    }
+    else {
+        ui.showAlert("Please enter valid details...", "alert-danger");
+    }
+
+    ui.hideLoader();
+    Utilities.scrollToBottom();
 }

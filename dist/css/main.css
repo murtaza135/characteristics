@@ -563,7 +563,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 80px;
+  min-height: 40px;
   width: 100%;
   padding: 1rem 1.5rem;
   margin-bottom: 1rem;
@@ -571,7 +571,8 @@
   background-color: #bbbbbb;
   color: #000000;
   border-radius: 10px;
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .alert .alert-message, .alert-primary .alert-message, .alert-secondary .alert-message, .alert-dark .alert-message, .alert-medium .alert-message, .alert-light .alert-message, .alert-success .alert-message, .alert-warning .alert-message, .alert-danger .alert-message {
@@ -824,6 +825,12 @@ img {
 
 #loader {
   display: none;
+  justify-content: center;
+}
+
+#loader img {
+  height: 200px;
+  width: 200px;
 }
 
 #results-container {
