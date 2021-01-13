@@ -814,6 +814,12 @@ img {
   justify-self: center;
   font-size: 1.25rem;
   font-weight: 600;
+  outline: none !important;
+  transition: all 0.2s ease;
+}
+
+.main-card .attributes-form.grid #submit:active {
+  opacity: 70%;
 }
 
 #loader {

@@ -1,5 +1,5 @@
 import Utilities from "./utilities"
-import { Alert, AdditionalInfoRadio, HeightInput } from "./components"
+import { Alert, AdditionalInfoRadio, HeightInput, CharacteristicProgressBars } from "./components"
 
 
 class UI {
@@ -89,6 +89,13 @@ class UI {
 
             this.btnFtUI.classList.add("active");
         }
+    }
+
+    showCharacteristicProgressBars(characteristics) {
+        const characteristicProgressBars = new CharacteristicProgressBars(characteristics);
+        this.resultsUI.innerHTML = "";
+        this.resultsUI.appendChild(characteristicProgressBars);
+        this.resultsContainerUI.style.display = "block";
     }
 }
 

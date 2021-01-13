@@ -89,3 +89,36 @@ export function HeightInput(measurementType) {
         };
     }
 }
+
+
+export function CharacteristicProgressBars(characteristics) {
+    const div = document.createElement("div");
+    div.innerHTML = `
+        <h4>Physical Attractiveness: </h4>
+        <div class="progress">
+            <div style="width: ${characteristics.attractiveness}%"><span class="text">${characteristics.attractiveness}%</span></div>
+        </div>
+
+        <h4>Intelligence and Wisdom: </h4>
+        <div class="progress">
+            <div style="width: ${characteristics.intelligence}%"><span class="text">${characteristics.intelligence}%</span></div>
+        </div>
+
+        <h4>Drive and Passion: </h4>
+        <div class="progress">
+            <div style="width: ${characteristics.drive}%"><span class="text">${characteristics.drive}%</span></div>
+        </div>
+
+        <h4>Good Character: </h4>
+        <div class="progress">
+            <div style="width: ${characteristics.goodCharacter}%"><span class="text">${characteristics.goodCharacter}%</span></div>
+        </div>
+
+        <h4>Chance of Success: </h4>
+        <div class="progress">
+            <div style="width: ${characteristics.success}%"><span class="text">${characteristics.success}%</span></div>
+        </div>
+    `;
+
+    return div;
+}
